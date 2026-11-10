@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Mental Health Insight Suite</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Atmospheric animated fluid mesh -->
+  <div class="ambient-canvas">
+    <div class="glow-orb orb-primary"></div>
+    <div class="glow-orb orb-secondary"></div>
+    <div class="glow-orb orb-tertiary"></div>
+  </div>
+
+  <main class="shell">
+    <header class="masthead">
+      <div class="pill-badge">
+        <span class="pulse-dot"></span>
+        Predictive Diagnostics v2.0
+      </div>
+      <h1>Neural Wellness Index</h1>
+      <p>Estimate student psychological balance using non-invasive lifestyle & digital metrics.</p>
+    </header>
+
+    <div class="workspace">
+      <!-- Input Deck -->
+      <section class="panel glass-panel">
+        <form id="prediction-form" autocomplete="off" novalidate>
+          
+          <div class="cluster">
+            <div class="cluster-header">
+              <span class="cluster-step">01</span>
+              <div>
+                <h2>Academic & Demographics</h2>
+                <p>Personal profile foundation</p>
+              </div>
+            </div>
+            
+            <div class="field-grid">
+              <div class="field">
+                <label for="age">Age (Years)</label>
+                <input type="number" id="age" min="1" max="99" placeholder="e.g., 20" required />
+              </div>
+
+              <div class="field">
+                <label for="gender">Gender</label>
+                <div class="select-wrapper">
+                  <select id="gender" required>
+                    <option value="" disabled selected>Select option</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="country">Country</label>
+                <input type="text" id="country" placeholder="e.g., India, USA" required />
+              </div>
+
+              <div class="field">
+                <label for="academic_level">Academic Level</label>
+                <div class="select-wrapper">
+                  <select id="academic_level" required>
+                    <option value="" disabled selected>Select level</option>
+                    <option value="High School">High School</option>
+                    <option value="Undergraduate">Undergraduate</option>
+                    <option value="Graduate">Graduate</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cluster">
+            <div class="cluster-header">
+              <span class="cluster-step">02</span>
+              <div>
+                <h2>Digital Consumption</h2>
+                <p>Screen exposure and mobile triggers</p>
+              </div>
+            </div>
+            
+            <div class="field-grid">
+              <div class="field">
+                <label for="most_used_platform">Most UsedPlatform</label>
+                <div class="select-wrapper">
+                  <select id="most_used_platform" required>
+                    <option value="" disabled selected>Select platform</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="LinkedIn">LinkedIn</option>
+                    <option value="Snapchat">Snapchat</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="YouTube">YouTube</option>
+                    <option value="TikTok">TikTok</option>
+                    <option value="WhatsApp">WhatsApp</option>
+                    <option value="WeChat">WeChat</option>
+                    <option value="LINE">LINE</option>
+                    <option value="KakaoTalk">KakaoTalk</option>
+                    <option value="VKontakte">VKontakte</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="purpose_of_use">Primary Purpose</label>
+                <div class="select-wrapper">
+                  <select id="purpose_of_use" required>
+                    <option value="" disabled selected>Select intent</option>
+                    <option value="Education">Education</option>
+                    <option value="Networking">Networking</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="News">News</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="avg_daily_usage_hours">Average Daily Screen Time (Hrs)</label>
+                <input type="number" id="avg_daily_usage_hours" min="1" max="23" placeholder="e.g., 6" required />
+              </div>
+
+              <div class="field">
+                <label for="daily_unlocks">Daily Pickups/Unlocks</label>
+                <input type="number" id="daily_unlocks" min="1" placeholder="e.g., 90" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="cluster">
+            <div class="cluster-header">
+              <span class="cluster-step">03</span>
+              <div>
+                <h2>Bio-Rhythm & Tension</h2>
+                <p>Restoration versus cognitive strain</p>
+              </div>
+            </div>
+            
+            <div class="field-grid">
+              <div class="field">
+                <label for="study_hours"> Study Hours/Day (Hrs)</label>
+                <input type="number" id="study_hours" min="1" placeholder="e.g., 5" required />
+              </div>
+
+              <div class="field">
+                <label for="physical_activity_hours">Physical Activity/Day (Hrs)</label>
+                <input type="number" id="physical_activity_hours" min="1" max="23" placeholder="e.g., 1" required />
+              </div>
+
+              <div class="field">
+                <label for="sleep_hours_per_night">Sleep/Night (Hrs)</label>
+                <input type="number" id="sleep_hours_per_night" min="1" max="23" placeholder="e.g., 7" required />
+              </div>
+
+              <div class="field">
+                <label for="stress_level">Perceived Stress Level</label>
+                <div class="select-wrapper">
+                  <select id="stress_level" required>
+                    <option value="" disabled selected>Self-rating</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                    <option value="Very High">Very High</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" id="submit-btn" class="action-btn">
+            <span class="btn-caption">Run Neural Inference</span>
+            <div class="btn-loader hidden" id="btn-loader"></div>
+          </button>
+        </form>
+      </section>
+
+      <!-- Outcome Terminal -->
+      <aside class="panel glass-panel outcome-panel">
+        
+        <!-- Idle State -->
+        <div id="state-idle" class="outcome-view">
+          <div class="radar-scan">
+            <div class="radar-sweep"></div>
+            <div class="radar-dot"></div>
+          </div>
+          <h3>System Idle</h3>
+          <p>Awaiting profile metrics to project your regression score on the psychological scale.</p>
+        </div>
+
+        <!-- Failure State -->
+        <div id="state-error" class="outcome-view hidden">
+          <div class="status-icon-bubble warn">!</div>
+          <h3 id="error-title">Inference Fault</h3>
+          <p id="error-detail">Server communication interrupted.</p>
+          <button type="button" class="retry-btn" onclick="document.getElementById('prediction-form').requestSubmit()">Retry Computation</button>
+        </div>
+
+        <!-- Calculated State -->
+        <div id="state-computed" class="outcome-view hidden">
+          <div class="score-card">
+            <span class="kicker">Score Evaluation</span>
+            <div class="score-hero">
+              <h2 id="score-metric">0.00</h2>
+              <span class="score-unit">PTS</span>
+            </div>
+
+            <!-- Animated Bar Gauge -->
+            <div class="gauge-track">
+              <div class="gauge-fill" id="gauge-fill"></div>
+            </div>
+
+            <div class="classification-tag" id="classification-tag">Nominal Equilibrium</div>
+            <p class="classification-notes" id="classification-notes">Lifestyle rhythms match standard resilience patterns.</p>
+          </div>
+
+          <div class="telemetry-deck">
+            <div class="telemetry-chip">
+              <span class="chip-label">Screen/Sleep Ratio</span>
+              <strong id="stat-ratio">--</strong>
+            </div>
+            <div class="telemetry-chip">
+              <span class="chip-label">Strain Impact</span>
+              <strong id="stat-strain">--</strong>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
